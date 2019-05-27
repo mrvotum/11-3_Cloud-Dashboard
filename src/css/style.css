@@ -1,0 +1,137 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+span {
+  display: inline-block;
+}
+
+.widget {
+  width: 100%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.controlPanel, .worklog {
+  width: 30%;
+  min-width: 350px;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.controlPanel {
+  margin-right: 5px;
+}
+.worklog {
+  margin-left: 5px;
+}
+
+.panelTitle {
+  margin-top: 0;
+}
+
+.instanceHolder {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+.statusRun, .statusStop {
+  position: relative;
+  margin-left: 20px;
+}
+
+.statusRun::before,
+.statusStop::before {
+  position: absolute;
+  content: '';
+  width: 10px;
+  height: 10px;
+  left: -15px;
+  top: 4px;
+  border-radius: 50%;
+}
+
+.statusRun::before {
+  background-color: rgb(12, 100, 0);
+}
+.statusStop::before {
+  background-color: rgb(187, 0, 0);
+}
+
+/* .play, .remove, .pause {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+} */
+
+.play {
+  border: 7px solid transparent;
+  box-sizing: border-box;
+  border-left: 7px solid #000;
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+.pause {
+  width: 3px;
+  height: 10px;
+  background-color: #000;
+  position: relative;
+  margin-right: 15px;
+}
+.pause::after {
+  content: '';
+  width: 3px;
+  height: 10px;
+  background-color: #000;
+  position: absolute;
+  left: 5px;
+  top: 0;
+}
+
+.remove {
+  width: 3px;
+  height: 12px;
+  transform: rotate(45deg);
+  background-color: #000;
+  position: relative;
+}
+.remove::after {
+  content: '';
+  width: 3px;
+  height: 12px;
+  transform: rotate(-90deg);
+  background-color: #000;
+  position: absolute;
+}
+
+.play:hover,
+.remove:hover,
+.pause:hover {
+  cursor: pointer;
+}
+
+.date {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.dataHolder:not(:first-child) {
+  margin-top: 20px;
+}
+
+.invisible {
+  display: none;
+  opacity: 0;
+  transform: translateX(-100%);
+}
